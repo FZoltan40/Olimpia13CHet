@@ -5,4 +5,5 @@
 
 
     public record CreateDataDto(string? Country, string? County, string? Description, Guid? PalyerId);
+    public record UpdateDataDto(string? Country, string? County, string? Description);
 }
