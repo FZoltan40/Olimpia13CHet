@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OlimpiaApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+58adaaa7134f3bdad6deb0243193ec6710d89258")]
 [assembly: System.Reflection.AssemblyProductAttribute("OlimpiaApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OlimpiaApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
