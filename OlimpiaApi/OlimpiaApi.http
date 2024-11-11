@@ -1,0 +1,6 @@
+@OlimpiaApi_HostAddress = http://localhost:5099
+
+GET {{OlimpiaApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
