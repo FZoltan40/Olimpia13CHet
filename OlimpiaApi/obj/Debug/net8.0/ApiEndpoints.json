@@ -239,7 +239,33 @@
   },
   {
     "ContainingType": "OlimpiaApi.Controllers.PlayerController",
-    "Method": "Get",
+    "Method": "GetlowPlayerData",
+    "RelativePath": "players/lowPlayerData/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "OlimpiaApi.Models.LowPlayerData",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "OlimpiaApi.Controllers.PlayerController",
+    "Method": "GetPlayerData",
     "RelativePath": "players/playerData/{id}",
     "HttpMethod": "GET",
     "IsController": true,

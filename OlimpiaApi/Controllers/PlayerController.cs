@@ -104,7 +104,7 @@ namespace OlimpiaApi.Controllers
         }
 
         [HttpGet("playerData/{id}")]
-        public ActionResult<Player> Get(Guid id)
+        public ActionResult<Player> GetPlayerData(Guid id)
         {
             using (var contex = new OlimipiaContext())
             {
@@ -113,6 +113,39 @@ namespace OlimpiaApi.Controllers
                 if (player != null)
                 {
                     return Ok(player);
+                }
+
+                return NotFound();
+            }
+        }
+
+        [HttpGet("lowPlayerData/{id}")]
+        public ActionResult<LowPlayerData> GetlowPlayerData(Guid id)
+        {
+            using (var contex = new OlimipiaContext())
+            {
+                /*var player = contex.Players.Include(x => x.Data).FirstOrDefault(player => player.Id == id);
+                var data = contex.Datas.FirstOrDefault(x => x.PalyerId == id);
+
+
+                var lowData = new LowPlayerData
+                {
+                    Name = player.Name,
+                    Country = data.Country,
+                    County = data.County,
+                    Decription = data.Description
+
+                };*/
+
+                var player = contex.Players.FirstOrDefault(x => x.Id == id);
+
+                var data = contex.Datas.Select(x => new { player.Name, x.Country, x.County, x.Description, x.PalyerId }).Where(x => x.PalyerId == id).ToList(); ;
+
+
+
+                if (data != null)
+                {
+                    return Ok(data);
                 }
 
                 return NotFound();
