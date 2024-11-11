@@ -204,5 +204,21 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "OlimpiaApi.Controllers.PlayerController",
+    "Method": "Delete",
+    "RelativePath": "players/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
