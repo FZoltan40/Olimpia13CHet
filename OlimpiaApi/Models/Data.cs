@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Text.Json.Serialization;
 
 namespace OlimpiaApi.Models;
 
@@ -19,5 +18,6 @@ public partial class Data
 
     public Guid? PalyerId { get; set; }
 
+    [JsonIgnore]
     public virtual Player? Palyer { get; set; }
 }

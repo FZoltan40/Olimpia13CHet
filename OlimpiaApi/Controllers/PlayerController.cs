@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using OlimpiaApi.Models;
 
 
@@ -102,5 +103,20 @@ namespace OlimpiaApi.Controllers
             }
         }
 
+        [HttpGet("playerData/{id}")]
+        public ActionResult<Player> Get(Guid id)
+        {
+            using (var contex = new OlimipiaContext())
+            {
+                var player = contex.Players.Include(x => x.Data).FirstOrDefault(player => player.Id == id);
+
+                if (player != null)
+                {
+                    return Ok(player);
+                }
+
+                return NotFound();
+            }
+        }
     }
 }
